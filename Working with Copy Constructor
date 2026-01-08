@@ -1,0 +1,29 @@
+// COPY CONSTRUCTOR 
+
+using System;
+public class CopyCons{
+    int x;
+    // Parameter Const
+    public CopyCons(int i){
+        x=i;
+        Console.WriteLine("Inside Const");
+    }
+    // Copy Const 
+    public CopyCons(CopyCons abc){
+        x=abc.x;
+        Console.WriteLine("Moving out of Copy Cons");
+        x=50;
+    }
+    // Method 
+    public void display(){
+    Console.WriteLine("Inside Display");
+    Console.WriteLine(x);
+    }
+    // Main Method 
+    static void Main(){
+        CopyCons Cn1 = new CopyCons(10);
+        Cn1.display();
+        CopyCons Cn2 = new CopyCons(Cn1);
+        Cn2.display();
+    }
+}
