@@ -1,0 +1,30 @@
+using System;
+public class HelloWorld
+{
+    int x;
+    // constuctor
+    public HelloWorld(int i)
+    {
+        x=i;
+        Console.WriteLine("Inside the constructor "+ i);
+    }
+    // method
+    public void display()
+    {
+        Console.WriteLine("Inside display method " + x);
+    }
+    // Main 
+    static void Main()
+    {
+    HelloWorld a = new HelloWorld(10);
+    HelloWorld b = new HelloWorld(20);
+    HelloWorld c = new HelloWorld(40);
+    c.display();
+    }
+}
+
+
+
+
+
+
