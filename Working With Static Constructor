@@ -1,0 +1,9 @@
+// STATIC CONSTRUCTOR 
+using System;
+public class StaticCons{
+    static StaticCons(){
+        Console.WriteLine("Inside Static Constructor ");
+    }
+    public static void Main(){
+    }
+}
