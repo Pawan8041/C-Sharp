@@ -1,0 +1,39 @@
+using System;
+class ABC
+{
+    int i;
+    static int y=5;
+// Below is the Non-Static Constructor
+    public ABC() 
+    {
+        Console.WriteLine("Inside the Non-Stactic Const");
+    }
+// Below is the Static Constructor
+    static ABC()
+    {
+        Console.WriteLine("Inside the Stactic Const");
+        y = 7;
+    }
+
+// Below is the Main Method
+    static void Main(string[] args)
+    {
+        ABC a = new ABC();
+        Console.WriteLine(a.i);
+        Console.WriteLine(y);
+        Console.WriteLine(a);
+
+    }
+}
+
+
+//  KEYPOINTS
+//  1) If we don't create a static constructor, it will be automatically created as a non-static constructor.
+//  2) Static values can be directly accessed in the main method, no need to create the instance.
+//  3) If we initiate the value while creating the static variable, it will print that only; else if we create the static constructor with a different value, it will return that value(Priority of Const Higher).
+//  4) In line number 24 {Console.WriteLine(a);}, I tried to print the object of the class, which means I didn't print anything from the object. I just tried to print the whole object with the name ABC as output.
+
+
+
+
+
