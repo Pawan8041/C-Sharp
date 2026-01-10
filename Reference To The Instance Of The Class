@@ -1,0 +1,18 @@
+using System;
+class ABC {
+    int x = 1000;
+    public ABC(int i) {
+        Console.WriteLine(x);
+        this.x = i;
+        Console.WriteLine(x);
+    }
+    static void Main() 
+    {
+        ABC a1 = new ABC(50);
+        ABC a3 = a1;
+        Console.WriteLine("Inside Main method");
+        Console.WriteLine(a3.x);
+        a3.x = 600;
+        Console.WriteLine(a1.x);
+    }
+}
