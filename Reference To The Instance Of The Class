@@ -16,3 +16,5 @@ class ABC {
         Console.WriteLine(a1.x);
     }
 }
+
+// Here a3 will act as a pointer to the instance (a1) of the class, where if we make any changes to a1 will reflect in a3 and vice versa.
