@@ -1,0 +1,36 @@
+using System;
+namespace AccessDemo1{
+public class AccessModifiers
+{
+    private void Test1()
+    {
+        Console.WriteLine("Private Method");
+    }
+    internal void Test2()
+    {
+        Console.WriteLine("Internal Method");
+    }
+    protected void Test3()
+    {
+        Console.WriteLine("Protected Method");
+    }
+    protected internal void Test4()
+    {
+        Console.WriteLine("Protected Internal Method");
+    }
+    public void Test5()
+    {
+        Console.WriteLine("Public Method");
+    }
+        // Main Method
+        static void Main()
+    {
+        AccessModifiers a1 = new AccessModifiers();
+        a1.Test1();
+        a1.Test2();
+        a1.Test3();
+        a1.Test4();
+        a1.Test5();
+    }
+}
+}
