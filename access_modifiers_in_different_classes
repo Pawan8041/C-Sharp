@@ -1,0 +1,141 @@
+// Five Case Scenarios to see which modifier is accessible under which project 
+
+
+// CASE 1 :- Same Class 
+
+using System;
+namespace ConsoleApp1;
+
+public class AccessModifiers
+{
+
+private void Test1()
+{
+    Console.WriteLine("Private Method");
+}
+internal void Test2()
+{
+    Console.WriteLine("Internal Method");
+}
+protected void Test3()
+{
+    Console.WriteLine("Protected Method");
+}
+protected internal void Test4()
+{
+    Console.WriteLine("Protected Internal Method");
+}
+public void Test5()
+{
+    Console.WriteLine("Public Method");
+}
+
+    // Main Method
+    static void Main()
+{
+
+    AccessModifiers a1 = new AccessModifiers();
+    a1.Test1();
+    a1.Test2();
+    a1.Test3();
+    a1.Test4();
+    a1.Test5();
+}
+}
+
+
+
+
+
+
+// CASE 2:- Child Class, Same Project
+
+using System;
+namespace ConsoleApp1;
+
+public class AccessModifier1: AccessModifiers
+{
+    static void Main() {
+        AccessModifier1 a2 = new AccessModifier1();
+        a2.Test2();
+        a2.Test3();
+        a2.Test4();
+        a2.Test5();
+    }
+}
+
+
+
+
+
+
+// CASE 3:- Non-Child Class(by creating the instance), Same Project 
+
+using System;
+namespace ConsoleApp1;
+public class AccessModifiers2
+{
+    static void Main()
+    {
+        AccessModifiers a3 = new AccessModifiers();
+        a3.Test2();
+        a3.Test4();
+        a3.Test5();
+
+    }
+}
+
+
+
+
+
+
+
+
+
+// CASE 4:- Child Class, Different Project by using reference 
+
+
+using System;
+namespace ConsoleApp2;
+
+public class AccessModifiers3 : ConsoleApp1.AccessModifiers
+{
+    static void Main()
+    {
+        AccessModifiers3 a4 = new AccessModifiers3();
+        a4.Test3();
+        a4.Test4();
+        a4.Test5();
+    }
+
+}
+
+
+
+
+
+// CASE 5:- NOn Child Class, DIfferent Project 
+
+using System;
+namespace ConsoleApp2;
+
+ public class AccessModifiers4
+  {
+ static void Main()
+   {
+        ConsoleApp1.AccessModifiers a5 = new ConsoleApp1.AccessModifiers();
+        a5.Test5();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
