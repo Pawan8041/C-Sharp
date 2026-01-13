@@ -1,0 +1,19 @@
+using System;
+namespace ConsoleApp1
+{
+    internal class Variables
+    {
+        int x = 5;
+        static int y = 6;
+        static void Main() 
+        {
+            int z = 7;
+            Variables v1 = new Variables();
+            v1.x = 45;
+            Console.WriteLine(v1.x);
+            Console.WriteLine(y);
+        }
+
+    }// Bcz untill and unless we dont create the instance it will not allocate the memory!!!!
+     // Static members dont require any instance of the class 
+}
