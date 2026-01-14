@@ -5,13 +5,23 @@ namespace ConsoleApp1
     {
         int x = 5;
         static int y = 6;
+        const float pi = 3.14f;
+        readonly bool flag;
+        public Variables(int x, bool flag)
+        {
+            this.x = x;
+            this.flag = flag;
+        }
         static void Main() 
         {
             int z = 7;
-            Variables v1 = new Variables();
-            v1.x = 45;
+            Variables v1 = new Variables(45,true);
+            Variables v2 = new Variables(75,false);
             Console.WriteLine(v1.x);
             Console.WriteLine(y);
+            Console.WriteLine(v1.flag);
+            Console.WriteLine(v2.flag);
+            Console.WriteLine(z);
         }
 
     }// Bcz untill and unless we dont create the instance it will not allocate the memory!!!!
