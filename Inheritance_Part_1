@@ -1,0 +1,45 @@
+using System;
+public class Inheritance_Parent_Class
+{
+    int y = 2;
+    public void display(){
+        Console.WriteLine("Inside The Parent Class");
+    }
+}
+
+public class Inheritance_Child_Class : Inheritance_Parent_Class
+{
+    int z = 4;
+    public void display1(){
+    Console.WriteLine("Inside The Child Class");
+    }
+    public static void Main(){
+      Inheritance_Child_Class a1 = new Inheritance_Child_Class();
+      a1.display(); // a1 got the memory and we can access the parent class element
+      a1.display1();// a1 has memory it can access its own elements
+      
+      Inheritance_Parent_Class p;// Creating the variable
+      p = a1;// referencing the variable to a1 instance i.e, it dont have memory it act as a pointer.
+      p.display();
+      }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
