@@ -1,0 +1,28 @@
+using System;
+public class ScopeOfVariables
+{
+    int var_of_class = 10;
+    
+    public void display(){
+        int var_of_method = 20;
+        Console.WriteLine(var_of_method);
+        Console.WriteLine(var_of_class);
+    }
+
+    public void display1(){
+    // Block level variable = j only accesible in these condition
+    for(int j = 0; j<5 ; j++){
+        Console.WriteLine(j);
+    }
+    }
+
+    public static void Main(string[] args)
+    {
+         ScopeOfVariables a1 = new  ScopeOfVariables();
+         a1.display();
+         Console.WriteLine(a1.var_of_class);
+    }
+}
+// Here, for printing the variable in method display we dont need to create the instance of the class because of the memory allocation is 
+   done using stack....which is deletd after end of the method
+// Whereas if we talk about the variable of the class, we need to create the Instance of the class because it work on heap memory.
