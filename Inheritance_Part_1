@@ -1,3 +1,7 @@
+
+CASE 1:- HERE WE HAVE INHERITED THE PARENT CLASS AND SHOWED THAT IF WE CREATE THE INSTANCE OF THE CHILD CLASS THEN WE CAN ACESS ALL THE ELEMENTS OF THE PARENT CLASS 
+BUT NOT VICE VERSA
+
 using System;
 public class Inheritance_Parent_Class
 {
@@ -22,6 +26,42 @@ public class Inheritance_Child_Class : Inheritance_Parent_Class
       p = a1;// referencing the variable to a1 instance i.e, it dont have memory it act as a pointer.
       p.display();
       }
+}
+
+CASE 2:- HERE I HAVE CREATED THE CONSTRUCTOR OF BOTH THE CLASSES AND SAW THAT IF WE RUN THE STATIC METHOD IN THE CHILD CLASS AND CREATED THE INSTANACE OF IT,
+THE CONSTRUCTOR OF THR PARENT CLASS WILL BE EXECUTED FIRST.
+
+
+// PARENT CLASS 
+using System;
+namespace ConsoleApp1
+{
+    internal class Inheritance_One
+    {
+        public Inheritance_One() 
+        {
+            Console.WriteLine("Inside the Parent Class");
+        }
+
+    }
+}
+
+
+// CHILD CLASS 
+using System;
+namespace ConsoleApp1
+{
+    internal class Inheritance_Two:Inheritance_One
+    {
+        public Inheritance_Two() 
+        {
+            Console.WriteLine("Inisde the Child Class");
+        }
+        static void Main()
+        {
+            Inheritance_Two a1 = new Inheritance_Two();
+        }
+    }
 }
 
 
