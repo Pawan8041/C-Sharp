@@ -13,7 +13,6 @@ public class HelloWorld
     {
         Console.WriteLine("Inside display method " + x);
     }
-    // Main 
     static void Main()
     {
     HelloWorld a = new HelloWorld(10);
