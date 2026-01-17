@@ -29,18 +29,16 @@ public void Test5()
 {
     Console.WriteLine("Public Method");
 }
-
     // Main Method
     static void Main()
 {
-
     AccessModifiers a1 = new AccessModifiers();
     a1.Test1();
     a1.Test2();
     a1.Test3();
     a1.Test4();
     a1.Test5();
-}
+  }
 }
 
 
