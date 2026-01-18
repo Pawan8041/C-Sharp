@@ -68,4 +68,46 @@ class Program
 
 
 
+using System;
+
+class Shape
+{
+    public void Draw()
+    {
+        Console.WriteLine("Drawing shape");
+    }
+}
+
+class Circle : Shape
+{
+    public void DrawCircle()
+    {
+        Console.WriteLine("Drawing circle");
+    }
+}
+
+class Rectangle : Shape
+{
+    public void DrawRectangle()
+    {
+        Console.WriteLine("Drawing rectangle");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Circle c = new Circle();
+        c.Draw();
+        c.DrawCircle();
+
+        Rectangle r = new Rectangle();
+        r.Draw();
+        r.DrawRectangle();
+    }
+}
+
+
+
 
