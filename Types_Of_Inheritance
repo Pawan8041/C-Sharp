@@ -25,3 +25,47 @@ class Program
         d.Bark();
     }
 }
+
+
+
+
+using System;
+
+class Vehicle
+{
+    public void Start()
+    {
+        Console.WriteLine("Vehicle started");
+    }
+}
+
+class Car : Vehicle
+{
+    public void Drive()
+    {
+        Console.WriteLine("Car is driving");
+    }
+}
+
+class ElectricCar : Car
+{
+    public void Charge()
+    {
+        Console.WriteLine("Electric car is charging");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        ElectricCar e = new ElectricCar();
+        e.Start();
+        e.Drive();
+        e.Charge();
+    }
+}
+
+
+
+
