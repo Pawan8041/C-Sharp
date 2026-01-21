@@ -22,7 +22,6 @@ class ABC
         Console.WriteLine(a.i);
         Console.WriteLine(y);
         Console.WriteLine(a);
-
     }
 }
 
