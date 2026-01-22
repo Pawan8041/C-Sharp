@@ -1,0 +1,44 @@
+using System;
+public class Parent_Class
+{
+    public void Test()
+    {
+        Console.WriteLine("Implementing Parent Test Method ");
+    }
+    // Taking Permission form parent 
+        public virtual void Show()
+    {
+        Console.WriteLine("Implementing Parent Show Method ");
+    }
+    
+}
+public class Child_Class : Parent_Class
+{
+    public void Test1()
+    {
+        Console.WriteLine("Implementing Child Test Method ");
+    }
+    // If we dont modify the show mehtod in the child class it will execute parent show method
+    public override void Show()
+    {
+        Console.WriteLine("Implementing Child Show method by overriding parent show method");
+    }
+    
+    static void Main()
+    {
+     Child_Class C = new Child_Class();  
+     C.Test();
+     C.Test1();
+     C.Show();
+    }
+}
+// NOTE: TO OVERRIDE A METHOD FROM PARENT CLASS WE NEED TO HAVE PERMISSION BY MENTIONING THE KEYWORD [VIRTUAL].
+
+// OUTPUT:- 
+// Implementing Parent Test Method 
+// Implementing Child Test Method 
+// Implementing Child Show method by overriding parent show method
+
+    
+    
+
