@@ -1,0 +1,38 @@
+using System;
+public class Overloading
+{
+    public void Test()
+    {
+        Console.WriteLine("No Parameter");
+    }
+        public void Test(int i)
+    {
+        Console.WriteLine("Integer as a parameter "+ i);
+    }
+        public void Test(string s)
+    {
+        Console.WriteLine("String as a parameter "+ s);
+    }
+        public void Test(int i,string s)
+    {
+        Console.WriteLine("Integer and String as a parameter "+ i+ " "+ s);
+    }
+        public void Test(string s, int i)
+    {
+        Console.WriteLine("String and Integer as a parameter "+ s +" "+ i);
+    }
+        public void Test(string s, int i, int j)
+    {
+        Console.WriteLine("String, Integer and Integer as a parameter "+ s +" "+ i+ " "+ j);
+    }
+    static void Main()
+    {
+        Overloading O = new Overloading();
+        O.Test();
+        O.Test(5);
+        O.Test("abc");
+        O.Test(5,"abc");
+        O.Test("abc",5);
+        O.Test("abc",5,7);
+    }
+}
