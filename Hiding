@@ -1,0 +1,38 @@
+using System;
+
+public class Parent_Class
+{
+    public virtual void Test1()
+        {
+            Console.WriteLine("Inside the Parent Test1 method");
+        }
+    public void Test2()
+        {
+            Console.WriteLine("Inside the Parent Test2 method");
+        }
+}
+
+public class Child_Class: Parent_Class
+{
+    public override void Test1()
+        {
+            Console.WriteLine("Inside the Child Test1 method");
+        }
+        // Using new Keyword
+    public new void Test2()
+        {
+            Console.WriteLine("Inside the Child Test2 method");
+        }
+        static void Main()
+        {
+            Child_Class c = new Child_Class();
+            c.Test1();
+            c.Test2();
+        }
+}
+
+
+
+
+
+//Console.WriteLine();
