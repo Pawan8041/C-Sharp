@@ -25,9 +25,14 @@ public class Child_Class: Parent_Class
         }
         static void Main()
         {
+            
+            Parent_Class p;
+            p = new Child_Class();
             Child_Class c = new Child_Class();
             c.Test1();
             c.Test2();
+            p.Test1();
+            p.Test2();
         }
 }
 
