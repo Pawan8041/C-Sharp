@@ -28,11 +28,15 @@ public class Child_Class: Parent_Class
             
             Parent_Class p;
             p = new Child_Class();
+            Parent_Class p1 = new Parent_Class ();
             Child_Class c = new Child_Class();
+            p1.Test1();
+            p1.Test2();
             c.Test1();
             c.Test2();
             p.Test1();
             p.Test2();
+            
         }
 }
 
